@@ -43,11 +43,12 @@ export class TradingViewAPI {
 
     console.log('All subscriptions: ', this.subscriptionMap);
     if (tickers) {
-      console.info('multiple tickers');
-      console.log(tickers);
-      const ticker = tickers.entries().next().value;
+      console.info('multiple tickers' + tickers.size + ' ' + simpleOrProName);
+      console.log('TickersList: ', tickers);
+      const tickerList = tickers.entries().next().value as [TickerSubscription, TickerSubscription];
+      const ticker = tickerList[0];
 
-      console.log('Returning ticker', ticker);
+      console.log('Returning ticker sub', ticker);
       return ticker;
     }
 
