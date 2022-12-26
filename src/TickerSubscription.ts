@@ -13,7 +13,7 @@ export class TickerSubscription extends (EventEmitter as new () => TypedEmitter<
   simpleOrProName: string;
   due!: number;
   private api: TradingViewAPI;
-  private tickerData!: TickerData;
+  public tickerData!: TickerData;
   destroyed = false;
 
   constructor(api: TradingViewAPI, simpleOrProName: string) {
