@@ -45,7 +45,10 @@ export class TradingViewAPI {
     if (tickers) {
       console.info('multiple tickers');
       console.log(tickers);
-      return tickers.entries().next().value;
+      const ticker = tickers.entries().next().value;
+
+      console.log('Returning ticker', ticker);
+      return ticker;
     }
 
     const ticker = new TickerSubscription(this, simpleOrProName);
