@@ -40,7 +40,11 @@ export class TradingViewAPI {
 
   public async getTicker(simpleOrProName: string): Promise<TickerSubscription> {
     const tickers = this.subscriptionMap.get(simpleOrProName);
+
+    console.log('All subscriptions: ', this.subscriptionMap);
     if (tickers) {
+      console.info('multiple tickers');
+      console.log(tickers);
       return tickers.entries().next().value;
     }
 
