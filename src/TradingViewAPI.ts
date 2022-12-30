@@ -84,9 +84,10 @@ export class TradingViewAPI {
       setTimeout(() => {
         if (!updated) {
           ticker.removeListener('update', onUpdate);
+          console.error("Couldn't fetch data for " + ticker.simpleOrProName);
           reject('Timed out.');
         }
-      }, 3000);
+      }, 10000);
     });
   }
 }
