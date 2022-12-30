@@ -1,6 +1,6 @@
 {
   "name": "tradingview-data",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "A gateway to TradingView's data for your Node.js application!",
   "keywords": [
     "tradingview",
